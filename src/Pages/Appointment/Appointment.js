@@ -4,11 +4,13 @@ import bg from '../../assets/images/bg.png'
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import Footer from '../Shared/Navbar/Footer/Footer';
-import { format } from 'date-fns';
+
 import Booking from './Booking';
+
 
 const Appointment = () => {
     const [date,setDate]=useState(new Date() )
+    
     return (
         <div>
             <div style={{
@@ -30,6 +32,7 @@ const Appointment = () => {
 
             </div>
             <Booking date={date} setDate={setDate} ></Booking>
+            
             <Footer></Footer>
         </div>
     );
