@@ -16,9 +16,9 @@ const Appointment = () => {
             <div style={{
                 'background': `url(${bg})`,
                  'backgroundSize':'cover' 
-            }} class="hero min-h-screen">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src={chair} class="max-w-xl rounded-lg shadow-2xl" />
+            }} className="hero min-h-screen">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src={chair} className="max-w-xl rounded-lg shadow-2xl" />
                     <div>
                         <DayPicker
                         mode="single"

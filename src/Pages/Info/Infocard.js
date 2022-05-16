@@ -5,8 +5,8 @@ const Infocard = ({info}) => {
     return (
         <div className='card card-side pl-12 bg-gradient-to-r from-secondary to-primary'>
             <figure><img src={img} alt="Movie"/></figure>
-            <div class="card-body">
-                <h2 class="card-title">{title}</h2>
+            <div className="card-body">
+                <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 
             </div>
