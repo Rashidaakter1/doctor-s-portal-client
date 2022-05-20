@@ -15,6 +15,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyAppointment from './Pages/Dashboard/MyAppointment';
 import MyReviews from './Pages/Dashboard/MyReviews';
+import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Shared/RequireAuth/RequireAdmin';
+import AddDoctor from './Pages/Dashboard/AddDoctor';
+import ManageDoctor from './Pages/Dashboard/ManageDoctor';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -28,10 +33,19 @@ function App() {
           <Appointment></Appointment>
         </RequireAuth>} />
 
+        {/* nested route */}
         <Route path="/dashboard" element={<RequireAuth><Dashboard/></RequireAuth>}>
           <Route  index element={<MyAppointment></MyAppointment>}></Route>
           <Route path='review'  element={<MyReviews></MyReviews>}></Route>
+          <Route path='payment/:id'  element={<Payment></Payment>}></Route>
+          <Route path='users'  element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='adddoctors'  element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
+          <Route path='managedoctors'  element={<RequireAdmin><ManageDoctor></ManageDoctor></RequireAdmin>}></Route>
         </Route>
+
+{/*                    ................................. */}
+
+
         <Route path="/reviews" element={<Reviews></Reviews>} />
         <Route path="/contact" element={<Contact></Contact>} />
         <Route path="/login" element={<Login></Login>} />
